@@ -1,3 +1,4 @@
+import java.lang.Math.*;
 public class Main {
     public static void main(String[] args) {
         BankAccount base = new BankAccount();
@@ -14,5 +15,8 @@ public class Main {
         checking.deposit(20);
         checking.withdraw(50);
         System.out.println("Checking: " + checking.getBalance());
+
+        double richest = Math.max(savings.getBalance(), Math.max(checking.getBalance(), base.getBalance()));
+        System.out.println("Richest: " + richest);
     }
 }
